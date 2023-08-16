@@ -7,3 +7,15 @@ This project was coded using a single thread in Python on top of TCP protocol. T
 - The software also knows to receive updates about changes that have occurred on other users' computers. That is, if the user installed the software on another computer, he selected an empty folder on the additional computer - to which the software downloads all the contents of the folder from the server, and then, as before, the software monitors the folder for any changes and updates the server.
 - The client must keep the ID that the server gave him - and in any future contact he must identify himself with the help of the ID. The client then continues to monitor the folder and synchronize with the server. Any changes made to a folder on one computer will be synchronized with the server precisely and with the other computers of the same client.
 - The server knows how to handle several different clients - whether they belong to the same user (same ID) or different users (different ID's) and knows how to synchronize any change in folders.
+
+You must have Python 3.10 or higher installed on your machine. Run the server.py file attached to utils.py by the following command in the terminal:
+
+    python3 servery.py 12345
+
+The number 12345 is the port number the server is listening to.
+
+run the client.py file by the following command in the terminal:
+
+    python3 client.py 1.2.3.4 12345
+
+The parameters are the IP address and port number of the server and how much seconds to wait between connect to the server.
